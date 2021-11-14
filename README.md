@@ -36,7 +36,7 @@ python main.py --dataset_file jrdb --data_path ../../jrdb_test/cvgl/group/jrdb/d
 ```
 #### 6. Using the JRDB ToolKit for calculating the AP
 
-You should reformat the output to the KITTI format inorder to be used by the JRDB ToolKit. This has been done for the Training outputs in the lines 46-125, and also for the validation and test outputs in the lines 205-354. You could change the addresses, and comment/uncomment some lines depending on your purpose. 
+You should reformat the output to the KITTI format inorder to be used by the JRDB ToolKit. This has been done for the Training outputs in the lines 46-125, and also for the validation and test outputs in the lines 205-354 of ./detr/engine.py. You could change the addresses, and comment/uncomment some lines depending on your purpose. 
 
 For calculating the AP for Training set and Validation set, you can use the JRDB ToolKit, by the following steps:
 1. compile the JRDB ToolKit based on your setting(occluded level, ...) by 
@@ -70,17 +70,17 @@ python main.py --dataset_file jrdb --data_path ../../jrdb_train/cvgl/group/jrdb/
 ## Results after some of the epochs
 | Architecture  | Epoch # | Default Transforms | Occlusion level  | Training AP | Validation AP |
 | ----- | ------- | ----- | ------- | ----- | ----- |
-| RN50  | Yes  | 32 | 3 | 0.446| 0.242 |
-| RN50  | Yes  | 37 | 2 | 0.688 | 0.477 |
-| RN50  | Yes  | 39 | 2 | - | 0.476 |
-| RN50  | Yes  | 40 | 2 | - | 0.486 |
-| RN50  | Yes  | 41 | 2 | - | 0.496 |
-| RN50  | Yes  | 42 | 2 | - | 0.478 |
-| RN50  | Yes  | 43 | 2 | - | 0.508 |
-| RN50  | Yes  | 44 | 2 | - | 0.520 |
+| RN50  | 32 | Yes | 3 | 0.446| 0.242 |
+| RN50  | 37 | No | 2 | 0.688 | 0.477 |
+| RN50  | 39 | No | 2 | - | 0.476 |
+| RN50  | 40 | No | 2 | - | 0.486 |
+| RN50  | 41 | No | 2 | - | 0.496 |
+| RN50  | 42 | No | 2 | - | 0.478 |
+| RN50  | 43 | No | 2 | - | 0.508 |
+| RN50  | 44 | No | 2 | - | 0.520 |
 
 ## Loss Curve
-![This is the loss curve](./detr/outputs/loss.png|width=100px)
+[./detr/outputs/loss.png|width=100px]]
 
 ## Sample output
 ![This is a sample output](./detr/inference/outputs/wot+wofo/E42/th0.5/000065.jpg)
