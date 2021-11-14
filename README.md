@@ -80,18 +80,14 @@ python main.py --dataset_file jrdb --data_path ../../jrdb_train/cvgl/group/jrdb/
 | RN50  | 44 | No | 2 | - | 0.520 |
 
 ## Loss Curve
-[./detr/outputs/loss.png|width=100px]]
+![This is the loss curve|50%](./detr/outputs/loss.png)
 
 ## Sample output
 ![This is a sample output](./detr/inference/outputs/wot+wofo/E42/th0.5/000065.jpg)
 
 ## References
 [1] N. Carion, F. Massa, G. Synnaeve, N. Usunier, A. Kirillov, S. Zagoruyko. End-to-End Object Detection with Transformers. In ECCV, 2020.
-
 [2] https://github.com/facebookresearch/detr
-
 [3] Martin-Martin, et al. In TPAMI, 2021
-
 [4] https://jrdb.stanford.edu/
-
 [5] https://jrdb.stanford.edu/benchmark/preparing
