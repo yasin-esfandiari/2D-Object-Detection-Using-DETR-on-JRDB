@@ -2,7 +2,7 @@
 ## Notes:
 
 1. This repository includes fine-tuning the Facebook's DETR(Detection Transformer)[1, 2] on the JackRabbot Dataset and Benchmark[3, 4].
-2. The result has been submitted to the [Detection Benchmark](https://jrdb.stanford.edu/leaderboards/detection) with [AP: 48.66%](https://jrdb.stanford.edu/leaderboards/results/535).
+2. The result has been submitted to the [Detection Benchmark](https://jrdb.erc.monash.edu/leaderboards/detection) with [AP: 48.66%](https://jrdb.erc.monash.edu/leaderboards/detection#hidden2dd06).
 3. The model has been trained 32 epochs with the default trasforms in the DETR code(like cropping), and after that was trained 10 more epochs on the full stitched images.
 4. I used the ResNet50 backbone, and changed the classification head to 2 (pedestrian and no-object).
 
@@ -85,9 +85,12 @@ python main.py --dataset_file jrdb --data_path ../../jrdb_train/cvgl/group/jrdb/
 ## Sample output
 ![This is a sample output](./detr/inference/outputs/wot+wofo/E42/th0.5/000065.jpg)
 
+## Model checkpoints
+[Epoch 43](https://drive.google.com/drive/folders/1vwT_6s0RRlrezUQdb2dqSQ09ybcG1X0g?usp=sharing)
+
 ## References
 [1] N. Carion, F. Massa, G. Synnaeve, N. Usunier, A. Kirillov, S. Zagoruyko. End-to-End Object Detection with Transformers. In ECCV, 2020.
 [2] https://github.com/facebookresearch/detr
 [3] Martin-Martin, et al. In TPAMI, 2021
-[4] https://jrdb.stanford.edu/
-[5] https://jrdb.stanford.edu/benchmark/preparing
+[4] https://jrdb.erc.monash.edu/
+[5] https://jrdb.erc.monash.edu/benchmark/
